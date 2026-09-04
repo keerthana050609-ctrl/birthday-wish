@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday My Pattani ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#08060b;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* BACKGROUND */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-2;
+
+    background:
+    radial-gradient(circle at 20% 20%,rgba(255,50,120,.16),transparent 30%),
+    radial-gradient(circle at 80% 70%,rgba(150,50,255,.13),transparent 30%),
+    linear-gradient(135deg,#08060b,#120914,#08060b);
+}
+
+/* STARS */
+
+.stars{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    pointer-events:none;
+}
+
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    opacity:.6;
+    animation:twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:.2;}
+    to{opacity:1;}
+}
+
+/* GENERAL */
+
+section{
+    min-height:100vh;
+    padding:100px 8%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+h1,h2,h3{
+    font-family:'Cormorant Garamond',serif;
+}
+
+h2{
+    font-size:clamp(40px,6vw,75px);
+    margin-bottom:20px;
+}
+
+p{
+    max-width:750px;
+    line-height:1.9;
+    color:#ddd;
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+}
+
+.hero-small{
+    font-size:15px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:#ff9fc5;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(60px,11vw,150px);
+    line-height:.9;
+    background:linear-gradient(90deg,#fff,#ff9fc5,#fff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero-name{
+    font-size:clamp(25px,4vw,45px);
+    margin-top:25px;
+    color:#ffc4da;
+}
+
+.heart{
+    font-size:60px;
+    margin:30px;
+    animation:heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+}
+
+.scroll{
+    margin-top:60px;
+    font-size:13px;
+    letter-spacing:3px;
+    color:#aaa;
+}
+
+/* CARDS */
+
+.card{
+    width:min(900px,95%);
+    padding:50px;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:30px;
+    background:rgba(255,255,255,.045);
+    backdrop-filter:blur(15px);
+    box-shadow:0 30px 100px rgba(0,0,0,.4);
+}
+
+.date{
+    color:#ff9fc5;
+    letter-spacing:4px;
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+/* MEMORY */
+
+.memory-title{
+    font-size:28px;
+    color:#ffc0d8;
+    margin-bottom:20px;
+}
+
+.memory-icon{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+/* SONGS */
+
+.song-list{
+    width:min(800px,100%);
+    display:grid;
+    gap:18px;
+    margin-top:30px;
+}
+
+.song{
+    padding:22px 28px;
+    border:1px solid rgba(255,255,255,.1);
+    background:rgba(255,255,255,.04);
+    border-radius:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    transition:.3s;
+}
+
+.song:hover{
+    transform:translateY(-4px);
+    background:rgba(255,105,160,.08);
+}
+
+.song-name{
+    text-align:left;
+}
+
+.song-name strong{
+    display:block;
+    color:#fff;
+}
+
+.song-name span{
+    font-size:12px;
+    color:#aaa;
+}
+
+.song audio{
+    width:180px;
+}
+
+/* MY MAN */
+
+.photo-grid{
+    width:min(1000px,100%);
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:40px;
+}
+
+.photo-card{
+    aspect-ratio:3/4;
+    border-radius:25px;
+    overflow:hidden;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.1);
+    position:relative;
+}
+
+.photo-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.photo-card:hover img{
+    transform:scale(1.08);
+}
+
+.photo-caption{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:30px 15px 15px;
+    background:linear-gradient(transparent,rgba(0,0,0,.85));
+    text-align:left;
+}
+
+/* LETTER */
+
+.letter{
+    text-align:left;
+    white-space:pre-line;
+    font-family:'Cormorant Garamond',serif;
+    font-size:22px;
+    line-height:1.8;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 30px;
+    border-radius:50px;
+    border:1px solid #ff9fc5;
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#ff9fc5;
+    color:#150a10;
+}
+
+/* FOREVER */
+
+.forever{
+    background:
+    radial-gradient(circle at center,rgba(255,70,130,.12),transparent 50%);
+}
+
+.forever-text{
+    font-size:clamp(35px,6vw,75px);
+    max-width:1000px;
+    color:#ffc2d9;
+}
+
+/* FINAL */
+
+.final h2{
+    font-size:clamp(60px,10vw,130px);
+}
+
+.final p{
+    font-size:20px;
+}
+
+.signature{
+    margin-top:40px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:40px;
+    color:#ffabc9;
+}
+
+
+/* FOREVER JOURNEY */
+
+#journey{
+    position:relative;
+}
+
+.journey-grid{
+    width:min(1100px,100%);
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:45px;
+}
+
+.journey-photo{
+    aspect-ratio:3/4;
+    border-radius:25px;
+    overflow:hidden;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.12);
+    position:relative;
+    box-shadow:0 20px 60px rgba(0,0,0,.3);
+}
+
+.journey-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s ease;
+}
+
+.journey-photo:hover img{
+    transform:scale(1.08);
+}
+
+.journey-caption{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:45px 18px 18px;
+    background:linear-gradient(transparent,rgba(0,0,0,.9));
+    text-align:left;
+}
+
+.journey-caption strong,
+.video-caption strong{
+    display:block;
+    color:#fff;
+    font-family:'Cormorant Garamond',serif;
+    font-size:24px;
+}
+
+.journey-caption span,
+.video-caption span{
+    display:block;
+    margin-top:5px;
+    color:#ddd;
+    font-size:12px;
+    line-height:1.5;
+}
+
+.journey-videos{
+    width:min(1000px,100%);
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    margin-top:35px;
+}
+
+.journey-video-card{
+    border-radius:25px;
+    overflow:hidden;
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.12);
+    box-shadow:0 20px 60px rgba(0,0,0,.3);
+}
+
+.journey-video-card video{
+    display:block;
+    width:100%;
+    aspect-ratio:16/9;
+    object-fit:cover;
+    background:#000;
+}
+
+.video-caption{
+    padding:20px;
+    text-align:left;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+    .journey-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
+
+    .journey-videos{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+
+
+    section{
+        padding:80px 5%;
+    }
+
+    .card{
+        padding:30px 20px;
+    }
+
+    .photo-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
+
+    .song{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .song audio{
+        width:100%;
+    }
+
+    .letter{
+        font-size:19px;
+    }
+}
+
+@media(max-width:450px){
+
+    .photo-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+/* FOREVER JOURNEY MEDIA CARDS */
+
+.journey-upload{
+    width:min(1100px,100%);
+}
+
+.journey-intro{
+    margin-bottom:35px;
+}
+
+.upload-grid{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.upload-card{
+    padding:0;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:24px;
+    background:rgba(255,255,255,.045);
+    overflow:hidden;
+    transition:.3s;
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+
+.upload-card:hover{
+    transform:translateY(-5px);
+    background:rgba(255,105,160,.07);
+}
+
+.upload-preview{
+    width:100%;
+    aspect-ratio:3/4;
+    border-radius:0;
+    background:rgba(0,0,0,.25);
+    overflow:hidden;
+}
+
+.upload-preview img,
+.upload-preview video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.6s ease;
+}
+
+.upload-card:hover .upload-preview img{
+    transform:scale(1.06);
+}
+
+.memory-card-caption{
+    padding:18px;
+    text-align:left;
+}
+
+.memory-card-caption strong{
+    display:block;
+    color:#fff;
+    font-family:'Cormorant Garamond',serif;
+    font-size:24px;
+}
+
+.memory-card-caption span{
+    display:block;
+    margin-top:5px;
+    color:#ddd;
+    font-size:12px;
+    line-height:1.6;
+}
+
+.video-upload-grid{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    margin-top:30px;
+}
+
+.video-card .upload-preview{
+    aspect-ratio:16/9;
+}
+
+.video-card .upload-preview video{
+    object-fit:cover;
+}
+
+@media(max-width:700px){
+    .upload-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .video-upload-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:450px){
+    .upload-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- STARS -->
+
+<div class="stars">
+
+<script>
+
+for(let i=0;i<100;i++){
+
+    const star=document.createElement("div");
+
+    star.className="star";
+
+    star.style.left=Math.random()*100+"%";
+    star.style.top=Math.random()*100+"%";
+
+    star.style.animationDelay=Math.random()*3+"s";
+
+    document.querySelector(".stars").appendChild(star);
+
+}
+
+</script>
+
+</div>
+
+
+<!-- BACKGROUND MUSIC -->
+
+<audio id="backgroundMusic" loop>
+    <source src="media/kadhaippoma.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-small">
+        September 5 • Your Special Day
+    </div>
+
+    <h1>
+        Happy Birthday
+    </h1>
+
+    <div class="hero-name">
+        My Pattani ❤️
+    </div>
+
+    <div class="heart">
+        ❤️
+    </div>
+
+    <p>
+        To my Pattani, Pulla, Erma, Panni, Maadu...
+        <br><br>
+        This little universe is made only for you.
+    </p>
+
+    <div class="scroll">
+        ↓ OUR STORY ↓
+    </div>
+
+</section>
+
+
+<!-- TIRUMANGALAM -->
+
+<section>
+
+    <div class="card">
+
+        <div class="memory-icon">
+            🚇
+        </div>
+
+        <div class="date">
+            WHERE IT ALL STARTED
+        </div>
+
+        <h2>
+            Tirumangalam Metro
+        </h2>
+
+        <div class="memory-title">
+            Our First Proposal ❤️
+        </div>
+
+        <p>
+            Some places are just places.
+
+            But some places become memories that stay in our hearts forever.
+
+            Tirumangalam Metro will always be special to me because
+            it holds one of the most beautiful moments of our story.
+
+            The place where our story took a beautiful turn.
+
+            The place where a simple moment became a forever memory.
+
+            And the place where I looked at you and realized...
+            maybe you were going to become my favorite person.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ASHOK NAGAR -->
+
+<section>
+
+    <div class="card">
+
+        <div class="memory-icon">
+            🚇
+        </div>
+
+        <div class="date">
+            ANOTHER SPECIAL PLACE
+        </div>
+
+        <h2>
+            Ashok Nagar Metro
+        </h2>
+
+        <p>
+            Another station.
+
+            Another memory.
+
+            Another little chapter of us.
+
+            Every place we have been together somehow becomes
+            more beautiful simply because you were there.
+
+            One day, when we look back at our journey,
+            I know we will smile at all these little moments.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- BSNL -->
+
+<section>
+
+    <div class="card">
+
+        <div class="memory-icon">
+            📞
+        </div>
+
+        <div class="date">
+            A PLACE WITH A MEMORY
+        </div>
+
+        <h2>
+            BSNL
+        </h2>
+
+        <p>
+            BSNL became more than just a place.
+
+            It became one of those little chapters in our story
+            that I will always remember.
+
+            Maybe it sounds simple to someone else.
+
+            But to me...
+
+            memories become special because they are connected to you.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ANNA UNIVERSITY -->
+
+<section>
+
+    <div class="card">
+
+        <div class="memory-icon">
+            🎓
+        </div>
+
+        <div class="date">
+            ONE OF MY FAVORITE MEMORIES
+        </div>
+
+        <h2>
+            Anna University
+        </h2>
+
+        <p>
+            Anna University will always have a special place
+            in my heart.
+
+            Not just because of the place...
+
+            But because of the memories we created there.
+
+            The conversations.
+            The laughs.
+            The moments when we were simply together.
+
+            If I could replay some memories of my life,
+            I would definitely choose the ones that have you in them.
+        </p>
+
+    </div>
+
+
+ 
+</section>
+<!-- OUR LITTLE UNIVERSE -->
+
+<section>
+
+    <div class="card">
+
+        <div class="memory-icon">
+            🌌
+        </div>
+
+        <div class="date">
+            OUR LITTLE UNIVERSE
+        </div>
+
+        <h2>
+            Just You & Me
+        </h2>
+
+        <p>
+            Our story isn't made only from big moments.
+
+            It is made from tiny conversations,
+            random laughs,
+            silly fights,
+            unexpected adventures,
+            long talks,
+            quiet moments,
+            and everything in between.
+
+            And somehow...
+
+            all those little things became
+            my favorite part of life.
+        </p>
+
+        <a href="#my-man" class="btn">
+            Meet My Man ❤️
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- MY MAN -->
+
+<section id="my-man">
+
+    <div class="date">
+        MY FAVORITE PERSON
+    </div>
+
+    <h2>
+        My Man ❤️
+    </h2>
+
+    <p>
+        The man behind all my smiles.
+        <br>
+        The person who makes ordinary days special.
+    </p>
+
+
+    <div class="photo-grid">
+
+        <div class="photo-card">
+            <img src="media/john1.jpg" alt="John">
+            <div class="photo-caption">
+                My favorite person ❤️
+            </div>
+        </div>
+
+        <div class="photo-card">
+            <img src="media/john2.jpg" alt="John">
+            <div class="photo-caption">
+                My Pattani 🥰
+            </div>
+        </div>
+
+        <div class="photo-card">
+            <img src="media/john3.jpg" alt="John">
+            <div class="photo-caption">
+                My Pulla ❤️
+            </div>
+        </div>
+
+        <div class="photo-card">
+            <img src="media/john4.jpg" alt="John">
+            <div class="photo-caption">
+                My Erma 😘
+            </div>
+        </div>
+
+        <div class="photo-card">
+            <img src="media/john5.jpg" alt="John">
+            <div class="photo-caption">
+                My Panni ❤️
+            </div>
+        </div>
+
+        <div class="photo-card">
+            <img src="media/john6.jpg" alt="John">
+            <div class="photo-caption">
+                My Maadu 🐮❤️
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- OUR FOREVER JOURNEY -->
+<section id="forever-journey">
+
+    <div class="date">HOW IT ALL STARTED</div>
+    <h2>Our Forever Journey ❤️</h2>
+
+    <p class="journey-intro">
+        Seven little memories and two beautiful videos...
+        <br>
+        Every frame holds a piece of our story. ❤️
+    </p>
+
+    <div class="journey-upload">
+
+        <!-- 7 MEMORY PHOTOS -->
+        <div class="upload-grid">
+
+            <div class="upload-card">
+                <div class="upload-preview">
+                    <img src="media/journey1.jpg" alt="Our first memory" loading="lazy">
+                </div>
+                <div class="memory-card-caption">
+                    <strong>The Beginning ❤️</strong>
+                    <span>Where our beautiful story started.</span>
+                </div>
+            </div>
+
+            <div class="upload-card">
+                <div class="upload-preview">
+                    <img src="media/journey2.jpg" alt="Our second memory" loading="lazy">
+                </div>
+                <div class="memory-card-caption">
+                    <strong>Our First Memories 🥰</strong>
+                    <span>The little moments that became special.</span>
+                </div>
+            </div>
+
+            <div class="upload-card">
+                <div class="upload-preview">
+                    <img src="media/journey3.jpg" alt="Our third memory" loading="lazy">
+                </div>
+                <div class="memory-card-caption">
+                    <strong>Growing Together ❤️</strong>
+                    <span>More laughter, more memories, more us.</span>
+                </div>
+            </div>
+
+            <div class="upload-card">
+                <div class="upload-preview">
+                    <img src="media/journey4.jpg" alt="Our fourth memory" loading="lazy">
+                </div>
+                <div class="memory-card-caption">
+                    <strong>Beautiful Moments ✨</strong>
+                    <span>Some memories deserve to stay forever.</span>
+                </div>
+            </div>
+
+            <div class="upload-card">
+                <div class="upload-preview">
+                    <img src="media/journey5.jpg" alt="Our fifth memory" loading="lazy">
+                </div>
+                <div class="memory-card-caption">
+                    <strong>Just Us ❤️</strong>
+                    <span>You and me, making ordinary moments beautiful.</span>
+                </div>
+            </div>
+
+            <div class="upload-card">
+                <div class="upload-preview">
+                    <img src="media/journey6.jpg" alt="Our sixth memory" loading="lazy">
+                </div>
+                <div class="memory-card-caption">
+                    <strong>Our Favorite Days 💕</strong>
+                    <span>Days I would happily live again.</span>
+                </div>
+            </div>
+
+            <div class="upload-card">
+                <div class="upload-preview">
+                    <img src="media/journey7.jpg" alt="Our seventh memory" loading="lazy">
+                </div>
+                <div class="memory-card-caption">
+                    <strong>Forever Starts Here ♾️</strong>
+                    <span>The best part of our story is still ahead.</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 4 JOURNEY VIDEOS -->
+        <div class="video-upload-grid">
+
+            <div class="upload-card video-card">
+                <div class="upload-preview">
+                    <video controls playsinline preload="metadata">
+                        <source src="media/journey-video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="memory-card-caption">
+                    <strong>Our First Video ❤️</strong>
+                    <span>A little memory from the beginning of our journey.</span>
+                </div>
+            </div>
+
+            <div class="upload-card video-card">
+                <div class="upload-preview">
+                    <video controls playsinline preload="metadata">
+                        <source src="media/journey-video2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="memory-card-caption">
+                    <strong>Beautiful Moments 🥰</strong>
+                    <span>One of those moments I always want to remember.</span>
+                </div>
+            </div>
+
+                <div class="memory-card-caption">
+                    <strong>Us Together ❤️</strong>
+                    <span>Every moment with you becomes a favorite memory.</span>
+                </div>
+            </div>
+
+                <div class="memory-card-caption">
+                    <strong>Our Story Continues ♾️</strong>
+                    <span>More memories, more adventures, and many more chapters.</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- SONGS -->
+
+<section>
+
+    <div class="date">
+        OUR SOUNDTRACK
+    </div>
+
+    <h2>
+        Songs That Feel Like Us 🎵
+    </h2>
+
+    <p>
+        Every song has a feeling.
+        And somehow, these songs remind me of you.
+    </p>
+
+
+    <div class="song-list">
+
+
+        <div class="song">
+
+            <div class="song-name">
+                <strong>Diet Mountain Dew ❤️</strong>
+                <span>Our special song</span>
+            </div>
+
+            <audio controls>
+                <source src="media/diet-mountain-dew.mp3" type="audio/mpeg">
+            </audio>
+
+        </div>
+
+
+        <div class="song">
+
+            <div class="song-name">
+                <strong>Avalum Naanum</strong>
+            </div>
+
+            <audio controls>
+                <source src="media/avalum-naanum.mp3" type="audio/mpeg">
+            </audio>
+
+        </div>
+
+
+        <div class="song">
+
+            <div class="song-name">
+                <strong>Nenjukkule</strong>
+            </div>
+
+            <audio controls>
+                <source src="media/nenjukkule.mp3" type="audio/mpeg">
+            </audio>
+
+        </div>
+
+
+        <div class="song">
+
+            <div class="song-name">
+                <strong>Nallai Alai</strong>
+            </div>
+
+            <audio controls>
+                <source src="media/nallai-alai.mp3" type="audio/mpeg">
+            </audio>
+
+        </div>
+
+
+        <div class="song">
+
+            <div class="song-name">
+                <strong>Aaruyire</strong>
+            </div>
+
+            <audio controls>
+                <source src="media/aaruyire.mp3" type="audio/mpeg">
+            </audio>
+
+        </div>
+
+
+        <div class="song">
+
+            <div class="song-name">
+                <strong>Ae Maanpuru Mangaiyae</strong>
+            </div>
+
+            <audio controls>
+                <source src="media/ae-maanpuru-mangaiyae.mp3" type="audio/mpeg">
+            </audio>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LETTER -->
+
+<section>
+
+    <div class="card">
+
+        <div class="date">
+            A LETTER FROM KEERTHANA
+        </div>
+
+        <h2>
+            To My Pattani 💌
+        </h2>
+
+        <div class="letter">
+
+My dearest John Vesly S,
+
+Happy Birthday to the person who means
+so much more to me than words can explain.
+
+Pattani...
+Pulla...
+Erma...
+Panni...
+Maadu...
+
+Whatever name I call you,
+you are still my favorite person.
+
+I don't know exactly what the future will look like,
+but I know one thing.
+
+I want you in it.
+
+I want more random conversations.
+More laughter.
+More silly fights.
+More memories.
+More places.
+More adventures.
+
+I want to look back years from now
+and say...
+
+"Look how far we have come."
+
+Thank you for being you.
+
+Thank you for being a beautiful part of my life.
+
+And thank you for giving me memories
+that I will always carry in my heart.
+
+Happy Birthday, my love.
+
+Forever yours,
+
+Keerthana ❤️
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FUTURE -->
+
+<section class="forever">
+
+    <div class="date">
+        OUR FUTURE
+    </div>
+
+    <div class="forever-text">
+
+        Many more places to go with you...
+        <br>
+        Forever. ❤️
+
+    </div>
+
+    <p style="margin-top:40px;">
+
+        This is only the beginning.
+
+        <br><br>
+
+        There are still so many places we haven't seen,
+        so many memories we haven't created,
+        and so many stories waiting for us.
+
+        <br><br>
+
+        I want to discover all of them with you.
+
+    </p>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="final">
+
+    <div class="date">
+        SEPTEMBER 5
+    </div>
+
+    <h2>
+        Happy Birthday
+        <br>
+        My Man ❤️
+    </h2>
+
+    <p>
+
+        John Vesly S,
+
+        <br><br>
+
+        May this birthday be the beginning
+        of another beautiful year of your life.
+
+        <br><br>
+
+        And I hope I get to be beside you
+        for many, many birthdays to come.
+
+    </p>
+
+    <div class="signature">
+        With all my love,
+        <br>
+        Keerthana ❤️
+    </div>
+
+</section>
+
+
+<script>
+
+/* BACKGROUND MUSIC */
+
+const music = document.getElementById("backgroundMusic");
+
+document.addEventListener("click", function(){
+
+    music.play().catch(()=>{});
+
+},{once:true});
+
+
+
+
+/* PAUSE BACKGROUND MUSIC WHEN A JOURNEY VIDEO PLAYS */
+const journeyVideos = document.querySelectorAll("#forever-journey video");
+
+journeyVideos.forEach(video => {
+    video.addEventListener("play", () => {
+        if (!music.paused) {
+            music.pause();
+        }
+    });
+});
+
+
+/* FADE-IN SECTIONS */
+
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(
+
+    entries => {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting){
+
+                entry.target.style.opacity="1";
+                entry.target.style.transform="translateY(0)";
+
+            }
+
+        });
+
+    },
+
+    {threshold:.15}
+
+);
+
+
+sections.forEach(section => {
+
+    section.style.opacity="0";
+    section.style.transform="translateY(40px)";
+    section.style.transition="opacity 1s ease, transform 1s ease";
+
+    observer.observe(section);
+
+});
+
+</script>
+
+</body>
+</html>
